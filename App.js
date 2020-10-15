@@ -11,22 +11,22 @@ export default function App() {
         onDone={() => navigation.navigate("Login")}
         pages={[
           {
-            backgroundColor: "#7eeffa",
+            backgroundColor: "#b5f1f7",
             image: <Image source={require("./assets/onboarding-1.png")} />,
-            title: "Onboarding",
-            subtitle: "Done with React Native Onboarding Swiper",
+            title: "All-IN-One",
+            subtitle: "APP",
           },
           {
-            backgroundColor: "#7eeffa",
+            backgroundColor: "#b5f1f7",
             image: <Image source={require("./assets/onboarding-2.png")} />,
             title: "One Click",
-            subtitle: "Done with React Native Onboarding Swiper",
+            subtitle: "Emergency Service",
           },
           {
-            backgroundColor: "#7eeffa",
+            backgroundColor: "#b5f1f7",
             image: <Image source={require("./assets/onboarding-3.png")} />,
             title: "Ask The Expert",
-            subtitle: "Done with React Native Onboarding Swiper",
+            subtitle: "24/7",
           },
         ]}
       />
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
+    alignItems: "stretch",
     justifyContent: "center",
   },
 });
