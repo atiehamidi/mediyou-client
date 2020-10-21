@@ -31,7 +31,7 @@ const App = () => {
 
   if (isFirstLaunch === null) {
     return null;
-  } else if (isFirstLaunch) {
+  } else if (isFirstLaunch == true) {
     return (
       <NavigationContainer>
         <AppStack.Navigator headerMode="none">
