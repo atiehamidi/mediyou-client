@@ -1,37 +1,21 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import Onboarding from "react-native-onboarding-swiper";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
+
+import OnboardingScreen from "./screens/OnboardingScreen";
+import LoginScreen from "./screens/LoginScreen";
+
+const AppStack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Onboarding
-        onSkip={() => navigation.replace("Login")}
-        onDone={() => navigation.navigate("Login")}
-        pages={[
-          {
-            backgroundColor: "#b5f1f7",
-            image: <Image source={require("./assets/onboarding-1.png")} />,
-            title: "All-IN-One",
-            subtitle: "APP",
-          },
-          {
-            backgroundColor: "#b5f1f7",
-            image: <Image source={require("./assets/onboarding-2.png")} />,
-            title: "One Click",
-            subtitle: "Emergency Service",
-          },
-          {
-            backgroundColor: "#b5f1f7",
-            image: <Image source={require("./assets/onboarding-3.png")} />,
-            title: "Ask The Expert",
-            subtitle: "24/7",
-          },
-        ]}
-      />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AppStack.Navigator>
+        <AppStack.Screen name="Onboarding" component={OnboardingScreen} />
+        <AppStack.Screen name="Login" component={LoginScreen} />
+      </AppStack.Navigator>
+    </NavigationContainer>
   );
 }
 
