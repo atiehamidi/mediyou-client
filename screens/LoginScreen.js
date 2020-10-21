@@ -2,13 +2,17 @@ import React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 export default function LoginScreen() {
-  return <view>Login</view>;
+  return (
+    <View>
+      <Text>Login</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "red",
     alignItems: "stretch",
     justifyContent: "center",
   },
