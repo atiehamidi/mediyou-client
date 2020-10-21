@@ -1,4 +1,4 @@
-import React from "react";
+import Reac, { useState, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
@@ -8,7 +8,9 @@ import LoginScreen from "./screens/LoginScreen";
 
 const AppStack = createStackNavigator();
 
-export default function App() {
+const App = () => {
+  const [isFirstLaunch, setIsFirstLaunch] = useState(false);
+
   return (
     <NavigationContainer>
       <AppStack.Navigator>
@@ -17,13 +19,6 @@ export default function App() {
       </AppStack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "stretch",
-    justifyContent: "center",
-  },
-});
+export default App;
