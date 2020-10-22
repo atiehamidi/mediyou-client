@@ -24,11 +24,13 @@ export default function LoginScreen() {
         }}
       />
       <Image
-        style={{ width: 100, height: 100, marginBottom: 50 }}
+        style={{ width: 110, height: 110, marginBottom: 50 }}
         source={require("../assets/logo-mediyou.png")}
       />
-      <Text>WELCOME</Text>
-      <Text style={{ marginBottom: 25, color: "#ACACAC" }}>
+      <Text style={{ fontSize: 20, fontWeight: "bold", color: "#005270" }}>
+        WELCOME
+      </Text>
+      <Text style={{ marginBottom: 45, color: "#ACACAC" }}>
         sign to continue
       </Text>
       <LinearGradient
@@ -64,7 +66,7 @@ export default function LoginScreen() {
           onPress={() => Alert.alert("Simple Button pressed")}
         />
       </LinearGradient>
-      <Button title="Trouble signing in?" />
+      <Button style={{ padding: 5 }} title="Trouble signing in?" />
     </View>
   );
 }
