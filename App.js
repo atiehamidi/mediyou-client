@@ -12,6 +12,7 @@ import {
 
 import OnboardingScreen from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
+import MobileLoginScreen from "./screens/MobileLoginScreen";
 
 const AppStack = createStackNavigator();
 
@@ -37,6 +38,7 @@ const App = () => {
         <AppStack.Navigator headerMode="none">
           <AppStack.Screen name="Onboarding" component={OnboardingScreen} />
           <AppStack.Screen name="Login" component={LoginScreen} />
+          <AppStack.Screen name="MobileLogin" component={MobileLoginScreen} />
         </AppStack.Navigator>
       </NavigationContainer>
     );

@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, Button, Alert } from "react-native";
+import { StyleSheet, Text, View, Image, Button, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function LoginScreen({ navigation }) {
+export default function MobileLoginScreen() {
   return (
     <View
       style={{
@@ -28,11 +28,25 @@ export default function LoginScreen({ navigation }) {
         source={require("../assets/logo-mediyou.png")}
       />
       <Text style={{ fontSize: 20, fontWeight: "bold", color: "#005270" }}>
-        WELCOME
+        Mobile Number
       </Text>
       <Text style={{ marginBottom: 45, color: "#ACACAC" }}>
-        sign to continue
+        OPT will be send to entered Mobile number
       </Text>
+      <TextInput
+        style={{
+          backgroundColor: "#FFF",
+          width: 300,
+          padding: 15,
+          alignItems: "center",
+          marginBottom: 10,
+          borderColor: "gray",
+          borderWidth: 1,
+          borderRadius: 30,
+        }}
+        defaultValue="+31"
+        placeholder="Mobile Number"
+      />
       <LinearGradient
         // Button Linear Gradient
         colors={["#00AEEF", "#0080B0"]}
@@ -44,29 +58,11 @@ export default function LoginScreen({ navigation }) {
         }}
       >
         <Button
-          title="Sign in with Mobile number"
-          color="#fff"
-          onPress={() => navigation.navigate("MobileLogin")}
-        />
-      </LinearGradient>
-      <Text style={{ margin: 8, color: "#ACACAC" }}>OR</Text>
-      <LinearGradient
-        // Button Linear Gradient
-        colors={["#4c669f", "#3b5998", "#192f6a"]}
-        style={{
-          width: 300,
-          padding: 10,
-          alignItems: "center",
-          borderRadius: 30,
-        }}
-      >
-        <Button
-          title="Sign in with facebook"
+          title="Continue"
           color="#fff"
           onPress={() => Alert.alert("Simple Button pressed")}
         />
       </LinearGradient>
-      <Button style={{ padding: 5 }} title="Trouble signing in?" />
     </View>
   );
 }
