@@ -14,6 +14,8 @@ import OnboardingScreen from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import MobileLoginScreen from "./screens/MobileLoginScreen";
 import VerifyMobileScreen from "./screens/VerifyMobileScreen";
+import LocationScreen from "./screens/LocationScreen";
+import MapScreen from "./screens/MapScreen";
 
 const AppStack = createStackNavigator();
 
@@ -41,6 +43,8 @@ const App = () => {
           <AppStack.Screen name="Login" component={LoginScreen} />
           <AppStack.Screen name="MobileLogin" component={MobileLoginScreen} />
           <AppStack.Screen name="VerifyMobile" component={VerifyMobileScreen} />
+          <AppStack.Screen name="Location" component={LocationScreen} />
+          <AppStack.Screen name="MapScreen" component={MapScreen} />
         </AppStack.Navigator>
       </NavigationContainer>
     );

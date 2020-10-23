@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, Button, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function MobileLoginScreen({ navigation }) {
+export default function LocationScreen({ navigation }) {
   return (
     <View
       style={{
@@ -45,6 +45,7 @@ export default function MobileLoginScreen({ navigation }) {
           borderRadius: 30,
         }}
         placeholder="Type Your location"
+        onCli
       />
       <LinearGradient
         // Button Linear Gradient
@@ -56,6 +57,11 @@ export default function MobileLoginScreen({ navigation }) {
           borderRadius: 30,
         }}
       >
+        <Button
+          title="Map"
+          color="#fff"
+          onPress={() => navigation.navigate("MapScreen")}
+        />
         <Button title="Confirm" color="#fff" />
       </LinearGradient>
     </View>

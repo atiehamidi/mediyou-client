@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 });
 const CELL_COUNT = 4;
 
-export default function VerifyMobileScreen() {
+export default function VerifyMobileScreen({ navigation }) {
   const [value, setValue] = useState("");
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -121,7 +121,7 @@ export default function VerifyMobileScreen() {
           title="Verify Now"
           color="#fff"
           marginTop="30"
-          onPress={() => Alert.alert("Simple Button pressed")}
+          onPress={() => navigation.navigate("Location")}
         />
       </LinearGradient>
       <Button style={{ padding: 5 }} title="Change number" />
