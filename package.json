@@ -22,6 +22,8 @@
     "react-native-confirmation-code-field": "^6.5.0",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-linear-gradient": "^2.5.6",
+    "react-native-map": "0.0.1",
+    "react-native-maps": "^0.27.1",
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.4",

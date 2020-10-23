@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, View, Image, Button, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import MapView from "react-native-maps";
 
 export default function MapScreen({ navigation }) {
   return (
@@ -12,6 +13,7 @@ export default function MapScreen({ navigation }) {
         backgroundColor: "#B7F4FF",
       }}
     >
+      <MapView />
       <LinearGradient
         // Button Linear Gradient
         colors={["#00AEEF", "#0080B0"]}
