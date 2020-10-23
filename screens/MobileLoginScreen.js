@@ -60,7 +60,7 @@ export default function MobileLoginScreen({ navigation }) {
         <Button
           title="Continue"
           color="#fff"
-          onPress={() => navigation.navigate(VerifyMobile)}
+          onPress={() => navigation.navigate("VerifyMobile")}
         />
       </LinearGradient>
       <Button style={{ padding: 5 }} title="Trouble signing in?" />
