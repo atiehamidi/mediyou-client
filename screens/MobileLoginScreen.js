@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, Button, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function MobileLoginScreen() {
+export default function MobileLoginScreen({ navigation }) {
   return (
     <View
       style={{
@@ -60,9 +60,10 @@ export default function MobileLoginScreen() {
         <Button
           title="Continue"
           color="#fff"
-          onPress={() => Alert.alert("Simple Button pressed")}
+          onPress={() => navigation.navigate(VerifyMobile)}
         />
       </LinearGradient>
+      <Button style={{ padding: 5 }} title="Trouble signing in?" />
     </View>
   );
 }
