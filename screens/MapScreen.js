@@ -24,7 +24,13 @@ export default function MapScreen({ navigation }) {
           borderRadius: 30,
         }}
       >
-        <Button title="Confirm" color="#fff" />
+        <Button
+          title="Confirm"
+          color="#fff"
+          onPress={() => {
+            navigation.navigate("HomeScreen");
+          }}
+        />
       </LinearGradient>
     </View>
   );
